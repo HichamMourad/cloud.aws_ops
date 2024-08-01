@@ -4,6 +4,7 @@
 /changelogs/.plugin-cache.yaml
 tests/integration/cloud-config-*
 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -133,3 +134,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# misc
+ansible-navigator.log
+.DS_Store
+.ansible.cfg
+*.gz
+*artifact*.json
+**/roles/*
+!**/roles/requirements.yml
+.deployment_id
