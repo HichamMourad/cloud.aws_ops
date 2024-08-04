@@ -1,7 +1,7 @@
 ---
 # Variables for create.yaml
 resource_prefix: "ansible-test"
-dest_region: us-east-2
+dest_region: us-west-1
 vpc_name: "{{ resource_prefix }}-vpc"
 vpc_cidr: 10.1.0.0/16
 subnet_cidr:
@@ -31,7 +31,7 @@ rds_listening_port: 5432
 deploy_flask_app_sshkey_pair_name: "{{ resource_prefix }}-key"
 deploy_flask_app_bastion_host_name: "{{ resource_prefix }}-bastion"
 deploy_flask_app_bastion_host_username: fedora
-deploy_flask_app_workers_instance_type: t3.micro
+deploy_flask_app_workers_instance_type: t3.small
 deploy_flask_app_workers_user_name: fedora
 deploy_flask_app_number_of_workers: 2
 deploy_flask_app_listening_port: 5000
@@ -50,12 +50,12 @@ rds_global_cluster_name: "{{ resource_prefix }}-global-cluster"
 
 # Primary cluster parameters ================================
 rds_primary_cluster_name: "{{ resource_prefix }}-primary-cluster"
-rds_primary_cluster_region: us-west-2
+rds_primary_cluster_region: us-west-1
 rds_primary_cluster_instance_name: "{{ resource_prefix }}-primary-instance"
 
 # Replica cluster parameters ================================
 rds_replica_cluster_name: "{{ resource_prefix }}-replica-cluster"
-rds_replica_cluster_region: us-east-2
+rds_replica_cluster_region: us-east-1
 rds_replica_cluster_instance_name: "{{ resource_prefix }}-replica-instance"
 
 # vars for route53 records
