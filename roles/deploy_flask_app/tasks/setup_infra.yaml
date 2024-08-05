@@ -31,13 +31,13 @@
     name: "{{ deploy_flask_app__workers_keypair_name }}"
   register: keypair_result
 
-- name: Save key pair content into file on bastion host
-  ansible.builtin.copy:
-    content: "{{ keypair_result.key.private_key }}"
-    dest: "{{ deploy_flask_app_workers_ssh_private_key }}"
-    mode: 0600
-  when: keypair_result is changed
-  delegate_to: "{{ deploy_flask_app__bastion_hostname }}"
+# - name: Save key pair content into file on bastion host
+#   ansible.builtin.copy:
+#     content: "{{ keypair_result.key.private_key }}"
+#     dest: "{{ deploy_flask_app_workers_ssh_private_key }}"
+#     mode: 0600
+#   when: keypair_result is changed
+#   delegate_to: "{{ deploy_flask_app__bastion_hostname }}"
 
 - name: Create workers instances
   block:
