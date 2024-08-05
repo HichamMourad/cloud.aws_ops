@@ -141,7 +141,6 @@ ansible-navigator.log
 .ansible.cfg
 *.gz
 *artifact*.json
-**/roles/*
 !**/roles/requirements.yml
 .deployment_id
 .vscode
