@@ -4,8 +4,8 @@
     - name: Create infrastructure - workers and load balancer
       ansible.builtin.include_tasks: setup_infra.yaml
 
-    # - name: Start application container into workers
-    #   ansible.builtin.include_tasks: start_containers.yaml
+    - name: Start application container into workers
+      ansible.builtin.include_tasks: start_containers.yaml
 
     - name: Create load balancer
       amazon.aws.elb_classic_lb:
