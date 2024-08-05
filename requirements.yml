@@ -1,7 +1,10 @@
 ---
 collections:
-  - name: cloud.aws_ops
-    version: 3.0.0
+  # - name: cloud.aws_ops
+  #   version: 3.0.0
+  - name: https://github.com/redhat-cop/cloud.aws_ops.git
+    version: latest
+    type: git
   - name: amazon.aws
     version: 8.1.0
   - name: community.aws
