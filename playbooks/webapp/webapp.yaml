@@ -26,7 +26,7 @@
         - name: Deploy app
           # ansible.builtin.include_role:
           #   name: cloud.aws_ops.deploy_flask_app
-          ansible.builtin.include_role: /roles/deploy_flask_app
+          ansible.builtin.include_tasks: /roles/deploy_flask_app/tasks/main.yaml
           vars:
             deploy_flask_app_private_subnet_id: "{{ private_subnet.subnet.id }}"
             deploy_flask_app_vpc_id: "{{ vpc.vpc.id }}"
