@@ -144,3 +144,5 @@ ansible-navigator.log
 **/roles/*
 !**/roles/requirements.yml
 .deployment_id
+.vscode
+.vscode/*
